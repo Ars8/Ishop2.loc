@@ -46,3 +46,9 @@
 ===============
 [2023-05-10 14:47:30] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Ishop2.loc\vendor\ishop\core\Router.php | Строка: 37
 ===============
+[2023-05-10 22:05:12] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\Ishop2.loc\vendor\ishop\core\Router.php | Строка: 38
+===============
+[2023-05-10 22:19:35] Текст ошибки: syntax error, unexpected '}' | Файл: C:\OSPanel\domains\Ishop2.loc\app\controllers\MainController.php | Строка: 13
+===============
+[2023-05-10 22:21:26] Текст ошибки: Class 'app\controllers\App' not found | Файл: C:\OSPanel\domains\Ishop2.loc\app\controllers\MainController.php | Строка: 12
+===============
