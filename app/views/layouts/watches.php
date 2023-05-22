@@ -8,8 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
+    <base href="/">
     <?=$this->getMeta(); ?>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--Custom-Theme-files-->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -62,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--top-header-->
     <!--start-logo-->
     <div class="logo">
-        <a href="index.html">
+        <a href="<?=PATH;?>">
             <h1>Luxury Watches</h1>
         </a>
     </div>
@@ -72,149 +75,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="header">
                 <div class="col-md-9 header-left">
-                    <div class="menu">
-                        <?php new \app\widgets\menu\Menu([
-                            'tpl' => WWW . '/menu/menu.php',
-                        ]); ?>
+                    <div class="menu-container">
+                        <div class="menu">
+                            <?php new \app\widgets\menu\Menu([
+                                'tpl' => WWW . '/menu/menu.php',
+                            ]); ?>
+                        </div>
                     </div>
-                    <!-- <div class="top-nav">
-                        <ul class="memenu skyblue">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li class="grid"><a href="#">Men</a>
-                                <div class="mepanel">
-                                    <div class="row">
-                                        <div class="col1 me-one">
-                                            <h4>Shop</h4>
-                                            <ul>
-                                                <li><a href="products.html">New Arrivals</a></li>
-                                                <li><a href="products.html">Blazers</a></li>
-                                                <li><a href="products.html">Swem Wear</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Handbags</a></li>
-                                                <li><a href="products.html">T-Shirts</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">My Shopping Bag</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Style Zone</h4>
-                                            <ul>
-                                                <li><a href="products.html">Shoes</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">Brands</a></li>
-                                                <li><a href="products.html">Coats</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Trousers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Popular Brands</h4>
-                                            <ul>
-                                                <li><a href="products.html">499 Store</a></li>
-                                                <li><a href="products.html">Fastrack</a></li>
-                                                <li><a href="products.html">Casio</a></li>
-                                                <li><a href="products.html">Fossil</a></li>
-                                                <li><a href="products.html">Maxima</a></li>
-                                                <li><a href="products.html">Timex</a></li>
-                                                <li><a href="products.html">TomTom</a></li>
-                                                <li><a href="products.html">Titan</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="grid"><a href="#">Women</a>
-                                <div class="mepanel">
-                                    <div class="row">
-                                        <div class="col1 me-one">
-                                            <h4>Shop</h4>
-                                            <ul>
-                                                <li><a href="products.html">New Arrivals</a></li>
-                                                <li><a href="products.html">Blazers</a></li>
-                                                <li><a href="products.html">Swem Wear</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Handbags</a></li>
-                                                <li><a href="products.html">T-Shirts</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">My Shopping Bag</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Style Zone</h4>
-                                            <ul>
-                                                <li><a href="products.html">Shoes</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">Brands</a></li>
-                                                <li><a href="products.html">Coats</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Trousers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Popular Brands</h4>
-                                            <ul>
-                                                <li><a href="products.html">499 Store</a></li>
-                                                <li><a href="products.html">Fastrack</a></li>
-                                                <li><a href="products.html">Casio</a></li>
-                                                <li><a href="products.html">Fossil</a></li>
-                                                <li><a href="products.html">Maxima</a></li>
-                                                <li><a href="products.html">Timex</a></li>
-                                                <li><a href="products.html">TomTom</a></li>
-                                                <li><a href="products.html">Titan</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="grid"><a href="#">Kids</a>
-                                <div class="mepanel">
-                                    <div class="row">
-                                        <div class="col1 me-one">
-                                            <h4>Shop</h4>
-                                            <ul>
-                                                <li><a href="products.html">New Arrivals</a></li>
-                                                <li><a href="products.html">Blazers</a></li>
-                                                <li><a href="products.html">Swem Wear</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Handbags</a></li>
-                                                <li><a href="products.html">T-Shirts</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">My Shopping Bag</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Style Zone</h4>
-                                            <ul>
-                                                <li><a href="products.html">Shoes</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">Brands</a></li>
-                                                <li><a href="products.html">Coats</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Trousers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Popular Brands</h4>
-                                            <ul>
-                                                <li><a href="products.html">499 Store</a></li>
-                                                <li><a href="products.html">Fastrack</a></li>
-                                                <li><a href="products.html">Casio</a></li>
-                                                <li><a href="products.html">Fossil</a></li>
-                                                <li><a href="products.html">Maxima</a></li>
-                                                <li><a href="products.html">Timex</a></li>
-                                                <li><a href="products.html">TomTom</a></li>
-                                                <li><a href="products.html">Titan</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="grid"><a href="typo.html">Blog</a>
-                            </li>
-                            <li class="grid"><a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div> -->
                     <div class="clearfix"> </div>
                 </div>
                 <div class="col-md-3 header-right">
@@ -323,14 +190,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--footer-end-->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/simpleCart.min.js"> </script>
-    <script type="text/javascript" src="js/memenu.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".memenu").memenu();
-        });
-    </script>
     <!--dropdown-->
     <script src="js/jquery.easydropdown.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        var menu_ul = $('.menu_drop > li > ul'),
+            menu_a  = $('.menu_drop > li > a');
+
+        menu_ul.hide();
+
+        menu_a.click(function(e) {
+            e.preventDefault();
+            if(!$(this).hasClass('active')) {
+                menu_a.removeClass('active');
+                menu_ul.filter(':visible').slideUp('normal');
+                $(this).addClass('active').next().stop(true,true).slideDown('normal');
+            } else {
+                $(this).removeClass('active');
+                $(this).next().stop(true,true).slideUp('normal');
+            }
+        });
+
+    });
+</script>
     <!--Slider-Starts-Here-->
     <script src="js/responsiveslides.min.js"></script>
     <script>
@@ -353,6 +236,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         });
     </script>
+    <script src="megamenu/js/main.js"></script>
     <script src="js/main.js"></script>
     <!--End-slider-script-->
 </body>
