@@ -22,7 +22,7 @@ class AppController extends Controller{
         $cache = Cache::instance();
         $cats = $cache->get('cats');
         if(!$cats) {
-            $cats = \R::getAssocc("SELECT * FROM category");
+            $cats = \R::getAssoc("SELECT * FROM category");
             $cache->set('cats', $cats);
         }
         return $cats;

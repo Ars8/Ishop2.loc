@@ -1,10 +1,9 @@
 <?php
 
-namespace app\widgets
+namespace app\widgets\menu;
 
+use ishop\App;
 use ishop\Cache;
-
-\<menu></menu>;
 
 class Menu{
 
@@ -41,10 +40,10 @@ class Menu{
         if(!$this->menuHtml) {
             $this->data = App::$app->getProperty('cats');
             if(!$this->data) {
-                $this->data = $cats = \R::getAssocc("SELECT * FROM {$this->table}");
+                $this->data = $cats = \R::getAssoc("SELECT * FROM {$this->table}");
             }
             $this->tree = $this->getTree();
-            $this->$this->getMenuHtml($this->tree);
+            $this->getMenuHtml($this->tree);
             if($this->cache){
                 $cache->set($this->cacheKey, $this->menuHtml, $this->cache);
             }
