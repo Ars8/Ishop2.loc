@@ -2,5 +2,5 @@
 <?php foreach($this->currencies as $k => $v): ?>
     <?php if($k != $this->currency['code']): ?>
         <option value="<?=$k;?>"><?=$k;?></option>
-    <?php endif;?>
+    <?php endif; ?>
 <?php endforeach; ?>

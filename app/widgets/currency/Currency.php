@@ -16,7 +16,7 @@ class Currency{
     }
 
     protected function run(){
-        $this->currencies = App::$app->getProperty('currensies');
+        $this->currencies = App::$app->getProperty('currencies');
         $this->currency = App::$app->getProperty('currency');
         echo $this->getHtml();
     }
@@ -26,13 +26,14 @@ class Currency{
     }
 
     public static function getCurrency($currencies){
-        if(isset($_COOKIE['currency']) && array_key_exists($_COOKIE['currency'], $currencies)) {
+        if(isset($_COOKIE['currency']) && array_key_exists($_COOKIE['currency'], $currencies)){
             $key = $_COOKIE['currency'];
         }else{
             $key = key($currencies);
         }
         $currency = $currencies[$key];
         $currency['code'] = $key;
+        return $currency;
     }
 
     protected function getHtml(){
